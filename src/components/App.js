@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
-import '../styles/App.css';
-import Counter from '../containers/Counter';
+import logo from 'media/logo.svg';
+import 'styles/App.css';
+import Counter from 'containers/Counter';
 
 class App extends Component {
   render() {
