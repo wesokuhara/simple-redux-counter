@@ -1,18 +1,14 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import styled from 'styled-components';
-import * as counterActions from 'actions/counterActions';
 
-const Main = styled.main`
-  background-color: papayawhip;
-  padding: 40px;
-  text-align: center;
+const Container = styled.div`
+  padding-top: 40px;
 `;
 
 const Title = styled.h1`
   font-size: 1.5rem;
   color: palevioletred;
+  margin-top: 0;
 `;
 
 const Button = styled.button`
@@ -25,26 +21,14 @@ const Button = styled.button`
   font-size: 1rem;
 `;
 
-const Counter = ({ actions, counter }) => {
+const Counter = ({ value, onIncrement, onDecrement }) => {
   return (
-    <Main>
-      <Title>{counter}</Title>
-      <Button onClick={actions.decrement}>-</Button>
-      <Button onClick={actions.increment}>+</Button>
-    </Main>
+    <Container>
+      <Title>{value}</Title>
+      <Button onClick={onDecrement}>-</Button>
+      <Button onClick={onIncrement}>+</Button>
+    </Container>
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    counter: state.counter
-  };
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-    actions: bindActionCreators(counterActions, dispatch)
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default Counter;
