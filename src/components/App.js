@@ -9,6 +9,7 @@ import * as snackbarActions from 'actions/snackbarActions';
 
 const Main = styled.main`
   height: 100vh;
+  min-height: 300px;
   background-color: papayawhip;
   text-align: center;
 `;

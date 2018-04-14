@@ -6,19 +6,19 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 1.5rem;
+  font-size: 4rem;
   color: palevioletred;
   margin-top: 0;
 `;
 
 const Button = styled.button`
-  margin: 0.5rem;
-  padding: 0.25rem 1.25rem;
+  margin: 10px;
+  padding: 0 30px;
   background-color: palevioletred;
   border: 2px solid palevioletred;
   border-radius: 3px;
   color: white;
-  font-size: 1rem;
+  font-size: 2rem;
 `;
 
 const Counter = ({ value, onIncrement, onDecrement }) => {
